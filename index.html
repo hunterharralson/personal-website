@@ -1,231 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hunter Harralson - UX/UI Designer and No-Code Developer based in San Diego. Crafting intuitive digital experiences and innovative no-code solutions.">
-    <meta name="author" content="Hunter Harralson">
-    <meta name="keywords" content="UX/UI Designer, No-Code Developer, San Diego, Web Design, Digital Experience, Product Design">
-    <title>Hunter Harralson | UX/UI Designer & No-Code Developer | San Diego</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
-    <style>
-        @font-face {
-            font-family: 'Graphik Black';
-            src: url('assets/GraphikBlack.otf') format('opentype');
-            font-weight: 900;
-            font-style: normal;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hunter Harralson - UX/UI Designer and No-Code Developer based in San Diego. Crafting intuitive digital experiences and innovative no-code solutions.">
+<meta name="author" content="Hunter Harralson">
+<meta name="keywords" content="UX/UI Designer, No-Code Developer, San Diego, Web Design, Digital Experience, Product Design">
+<title>Hunter Harralson | UX/UI Designer & No-Code Developer | San Diego</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<style>
+@font-face {
+font-family: 'Graphik Black';
+src: url('assets/GraphikBlack.otf') format('opentype');
+font-weight: 900;
+font-style: normal;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: system-ui, -apple-system, sans-serif;
+}
 
-        body {
-            background: #F2F1ED;
-            color: #17181A;
-            line-height: 1.6;
-        }
+body {
+background: #F2F1ED;
+color: #17181A;
+line-height: 1.6;
+}
 
-        a {
-            color: inherit !important;
-        }
+a {
+color: inherit !important;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
 
-        nav {
-            padding: 2rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+nav {
+padding: 2rem 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-        .logo {
-            height: 40px;
-            width: 40px;
-        }
+.logo {
+height: 40px;
+width: 40px;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
+.nav-links {
+display: flex;
+gap: 2rem;
+}
 
-        .nav-links a {
-            color: #f8fafc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+.nav-links a {
+color: #f8fafc;
+text-decoration: none;
+transition: color 0.3s;
+}
 
-        .nav-links a:hover {
-            color: #B8B2FF;
-        }
+.nav-links a:hover {
+color: #B8B2FF;
+}
 
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            padding: 4rem 0;
-        }
+.hero {
+min-height: 90vh;
+display: flex;
+align-items: center;
+padding: 4rem 0;
+}
 
-        .hero-content {
-            width: 100%;
-        }
+.hero-content {
+width: 100%;
+}
 
-        .content-wrapper {
-            display: flex;
-            justify-content: flex-end;
-        }
+.content-wrapper {
+display: flex;
+justify-content: flex-end;
+}
 
-        .max-width-wrapper {
+.max-width-wrapper {
+            max-width: 660px;
             max-width: 460px;
-        }
+}
 
-        h1 {
-            font-family: 'Graphik Black', system-ui, -apple-system, sans-serif;
-            font-size: 5.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 0.9;
-            letter-spacing: -0.01em;
-            opacity: 0;
-            transform: translateY(20px);
-            display: flex;
-            flex-wrap: wrap;
-        }
+h1 {
+font-family: 'Graphik Black', system-ui, -apple-system, sans-serif;
+font-size: 5.5rem;
+margin-bottom: 1.5rem;
+line-height: 1;
+letter-spacing: -0.01em;
+opacity: 0;
+transform: translateY(20px);
+display: flex;
+flex-wrap: wrap;
+}
 
-        h1 .last-name {
-            margin-left: 4rem;
-            flex-basis: 100%;
+h1 .last-name {
+margin-left: 4rem;
+flex-basis: 100%;
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
             letter-spacing: inherit;
-        }
+}
 
-        .subtitle {
-            margin-bottom: 2rem;
-            opacity: 0.8;
-            transform: translateY(20px);
-        }
+.subtitle {
+            font-size: 14px;
+margin-bottom: 2rem;
+opacity: 0.8;
+transform: translateY(20px);
+}
 
-        .cta {
-            display: inline-block;
-            background: #17181A;
-            color: #ffffff !important;
-            padding: 1rem 2rem;
-            border-radius: 0rem 0.5rem 0rem 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, border-radius 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-        }
+.cta {
+display: inline-block;
+background: #17181A;
+color: #ffffff !important;
+padding: 1rem 2rem;
+border-radius: 0rem 0.5rem 0rem 0.5rem;
+text-decoration: none;
+font-weight: 600;
+transition: transform 0.3s, border-radius 0.3s;
+opacity: 0;
+transform: translateY(20px);
+}
 
-        .cta:hover {
-            transform: translateY(-2px);
-            border-radius: 0.5rem;
-        }
+.cta:hover {
+transform: translateY(-2px);
+border-radius: 0.5rem;
+}
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-            opacity: 0;
-        }
+.scroll-indicator {
+position: absolute;
+bottom: 2rem;
+left: 50%;
+transform: translateX(-50%);
+animation: bounce 2s infinite;
+opacity: 0;
+}
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-20px);
+}
+60% {
+transform: translateY(-10px);
+}
+}
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
-            }
+@media (max-width: 768px) {
+h1 {
+font-size: 3rem;
+}
 
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+.nav-links {
+display: none;
+}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <img src="assets/logo.svg" class="logo">
-            <div class="nav-links">
-                <!-- <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a> -->
-            </div>
-        </nav>
+<div class="container">
+<nav>
+<img src="assets/logo.svg" class="logo">
+<div class="nav-links">
+<!-- <a href="#work">Work</a>
+               <a href="#about">About</a>
+               <a href="#contact">Contact</a> -->
+</div>
+</nav>
 
-        <section class="hero">
-            <div class="hero-content">
-                <h1>HUNTER <span class="last-name">HARRALSON</span></h1>
-                <div class="content-wrapper">
-                    <div class="max-width-wrapper">
-                        <p class="subtitle">Making dope stuff over at <a href="https://pushrefresh.com" target="_blank">Push Refresh</a>, where we craft exquisite web and app experiences with a personal touch. Let's innovate, create, and refresh your digital world!</p>
-                        <a href="https://pushrefresh.com/" class="cta">Check Us Out</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+<section class="hero">
+<div class="hero-content">
+<h1>HUNTER <span class="last-name">HARRALSON</span></h1>
+<div class="content-wrapper">
+<div class="max-width-wrapper">
+<p class="subtitle">Making dope stuff over at <a href="https://pushrefresh.com" target="_blank">Push Refresh</a>, where we craft exquisite web and app experiences with a personal touch. Let's innovate, create, and refresh your digital world!</p>
+<a href="https://pushrefresh.com/" class="cta">Check Us Out</a>
+</div>
+</div>
+</div>
+</section>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Split the text into individual characters
-            const splitHeading = new SplitText("h1", {type: "chars"});
-            const chars = splitHeading.chars;
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+// Animate elements on page load
+gsap.to('h1', {
+opacity: 1,
+y: 0,
+duration: 1,
+ease: 'power3.out'
+});
 
-            // Animate each character
-            gsap.from(chars, {
-                y: 100,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.03,
-                ease: "power4.out"
-            });
+gsap.to('.subtitle', {
+opacity: 1,
+y: 0,
+duration: 1,
+delay: 0.2,
+ease: 'power3.out'
+});
 
-            // Existing animations
-            gsap.to('.subtitle', {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: 0.5,
-                ease: 'power3.out'
-            });
+gsap.to('.cta', {
+opacity: 1,
+y: 0,
+duration: 1,
+delay: 0.4,
+ease: 'power3.out'
+});
 
-            gsap.to('.cta', {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: 0.7,
-                ease: 'power3.out'
-            });
-
-            gsap.to('.scroll-indicator', {
-                opacity: 0.7,
-                duration: 1,
-                delay: 1
-            });
-        });
-    </script>
+gsap.to('.scroll-indicator', {
+opacity: 0.7,
+duration: 1,
+delay: 1
+});
+});
+</script>
 </body>
 </html>
