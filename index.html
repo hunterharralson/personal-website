@@ -6,6 +6,15 @@
 <meta name="description" content="Hunter Harralson - UX/UI Designer and No-Code Developer based in San Diego. Crafting intuitive digital experiences and innovative no-code solutions.">
 <meta name="author" content="Hunter Harralson">
 <meta name="keywords" content="UX/UI Designer, No-Code Developer, San Diego, Web Design, Digital Experience, Product Design">
+<meta property="og:title" content="Hunter Harralson | UX/UI Designer & No-Code Developer | San Diego">
+<meta property="og:description" content="Hunter Harralson - UX/UI Designer and No-Code Developer based in San Diego. Crafting intuitive digital experiences and innovative no-code solutions.">
+<meta property="og:image" content="assets/images/open graph image.jpg">
+<meta property="og:url" content="https://hunterharralson.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hunter Harralson | UX/UI Designer & No-Code Developer | San Diego">
+<meta name="twitter:description" content="Hunter Harralson - UX/UI Designer and No-Code Developer based in San Diego. Crafting intuitive digital experiences and innovative no-code solutions.">
+<meta name="twitter:image" content="assets/images/open graph image.jpg">
 <title>Hunter Harralson | UX/UI Designer & No-Code Developer | San Diego</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <style>
@@ -13,6 +22,20 @@
 font-family: 'Graphik Black';
 src: url('assets/GraphikBlack.otf') format('opentype');
 font-weight: 900;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Editor\'s Note';
+src: url('assets/font/Editor\'sNote-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Graphik';
+src: url('assets/font/GraphikRegular.otf') format('opentype');
+font-weight: 400;
 font-style: normal;
 }
 
@@ -24,8 +47,8 @@ font-family: system-ui, -apple-system, sans-serif;
 }
 
 body {
-background: #F2F1ED;
-color: #17181A;
+background: #121517;
+color: #ffffff;
 line-height: 1.6;
 }
 
@@ -57,7 +80,7 @@ gap: 2rem;
 }
 
 .nav-links a {
-color: #f8fafc;
+color: #ffffff;
 text-decoration: none;
 transition: color 0.3s;
 }
@@ -71,10 +94,21 @@ min-height: 90vh;
 display: flex;
 align-items: center;
 padding: 4rem 0;
+gap: 128px;
 }
 
 .hero-content {
 width: 100%;
+}
+
+.avatar {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: 1.5px solid rgba(255, 255, 255, 0.1);
+margin-bottom: 32px;
+opacity: 0;
+transform: translateY(20px);
 }
 
 .content-wrapper {
@@ -83,53 +117,83 @@ justify-content: flex-end;
 }
 
 .max-width-wrapper {
-            max-width: 660px;
-            max-width: 460px;
+max-width: 480px;
+}
+
+.content-section {
+max-width: 560px;
+padding-top: 32px;
+border-top: 1.5px solid rgba(255, 255, 255, 0.1);
 }
 
 h1 {
-font-family: 'Graphik Black', system-ui, -apple-system, sans-serif;
-font-size: 5.5rem;
-margin-bottom: 1.5rem;
-line-height: 1;
+font-family: 'Editor\'s Note', system-ui, -apple-system, sans-serif;
+font-size: 72px;
+font-weight: 400;
+margin-bottom: 128px;
+line-height: 100%;
 letter-spacing: -0.01em;
 opacity: 0;
 transform: translateY(20px);
 display: flex;
-flex-wrap: wrap;
+flex-wrap: nowrap;
+white-space: nowrap;
 }
 
 h1 .last-name {
-margin-left: 4rem;
-flex-basis: 100%;
-            font-family: inherit;
-            font-size: inherit;
-            line-height: inherit;
-            letter-spacing: inherit;
+margin-left: 0;
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+letter-spacing: inherit;
 }
 
 .subtitle {
-margin-bottom: 2rem;
+margin-bottom: 48px;
 opacity: 0.8;
 transform: translateY(20px);
+font-family: 'Graphik', system-ui, -apple-system, sans-serif;
+font-size: 20px;
+line-height: 175%;
+letter-spacing: -0.02em;
+}
+
+.subtitle a {
+color: #256EFF !important;
+text-decoration: none;
+font-size: 22px;
+transition: opacity 0.3s;
+}
+
+.subtitle a:hover {
+opacity: 0.7;
 }
 
 .cta {
-display: inline-block;
-background: #17181A;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: #256EFF;
 color: #ffffff !important;
-padding: 1rem 2rem;
-border-radius: 0rem 0.5rem 0rem 0.5rem;
+padding: 20px 40px;
+border-radius: 0;
 text-decoration: none;
-font-weight: 600;
-transition: transform 0.3s, border-radius 0.3s;
+font-weight: 400;
+font-size: 18px;
+font-family: 'Graphik', system-ui, -apple-system, sans-serif;
+transition: transform 0.3s, background-color 0.3s;
 opacity: 0;
 transform: translateY(20px);
 }
 
 .cta:hover {
 transform: translateY(-2px);
-border-radius: 0.5rem;
+background: rgba(37, 110, 255, 0.7);
+}
+
+.cta-icon {
+width: 16px;
+height: 12px;
 }
 
 .scroll-indicator {
@@ -171,7 +235,9 @@ display: none;
 <body>
 <div class="container">
 <nav>
-<img src="assets/logo.svg" class="logo">
+<a href="https://pushrefresh.com" target="_blank">
+<img src="assets/images/log-white.svg" class="logo" alt="Push Refresh Logo">
+</a>
 <div class="nav-links">
 <!-- <a href="#work">Work</a>
                <a href="#about">About</a>
@@ -181,11 +247,16 @@ display: none;
 
 <section class="hero">
 <div class="hero-content">
-<h1>HUNTER <span class="last-name">HARRALSON</span></h1>
+<img src="assets/images/avatar.jpeg" alt="Hunter Harralson" class="avatar">
+<h1>Hunter Harralson</h1>
 <div class="content-wrapper">
-<div class="max-width-wrapper">
-<p class="subtitle">Making dope stuff over at <a href="https://pushrefresh.com" target="_blank">Push Refresh</a>, where we craft exquisite web and app experiences with a personal touch. Let's innovate, create, and refresh your digital world!</p>
-<a href="https://pushrefresh.com/" class="cta">Check Us Out</a>
+<div class="content-section">
+<p class="subtitle">Co-founder of <a href="https://pushrefresh.com" target="_blank">Push Refresh</a>. UX/UI Designer and Low-code Developer creating dope websites and apps.</p>
+<a href="https://pushrefresh.com/" class="cta">Check us out
+<svg class="cta-icon" width="100%" height="100%" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0963 0.692261L15.4038 6.00001L10.0963 11.3078L9.38856 10.5885L13.4771 6.50001H0.596313V5.50001H13.4771L9.38856 1.41151L10.0963 0.692261Z" fill="white"/>
+</svg>
+</a>
 </div>
 </div>
 </div>
@@ -195,10 +266,18 @@ display: none;
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 // Animate elements on page load
+gsap.to('.avatar', {
+opacity: 1,
+y: 0,
+duration: 1,
+ease: 'power3.out'
+});
+
 gsap.to('h1', {
 opacity: 1,
 y: 0,
 duration: 1,
+delay: 0.1,
 ease: 'power3.out'
 });
 
